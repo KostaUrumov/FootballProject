@@ -9,6 +9,7 @@
       "MVC_Football/1.0.0": {
         "dependencies": {
           "Database": "1.0.0",
+          "Football.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.Design": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
@@ -709,6 +710,14 @@
         "runtime": {
           "Database.dll": {}
         }
+      },
+      "Football.Core/1.0.0": {
+        "dependencies": {
+          "Database": "1.0.0"
+        },
+        "runtime": {
+          "Football.Core.dll": {}
+        }
       }
     }
   },
@@ -1195,6 +1204,11 @@
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
     "Database/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Football.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

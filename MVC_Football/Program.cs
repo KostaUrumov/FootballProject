@@ -1,4 +1,5 @@
 using Database.Data;
+using Database.Data.Common;
 using Football.Core.Contracts;
 using Football.Core.Services;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +14,11 @@ namespace MVC_Football
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<FootballDataDBContext> (options =>
+            builder.Services.AddDbContext<FootballDataDBContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<IFootballService, FootballService>();
+            builder.Services.AddScoped<IRepository, Repository>();
 
             var app = builder.Build();
 

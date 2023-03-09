@@ -3550,24 +3550,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\koceu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Kostadin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\koceu\\OneDrive\\Desktop\\Football\\Football\\MVC_Football\\MVC_Football.csproj",
+      "projectUniqueName": "C:\\Users\\Kostadin\\OneDrive\\Desktop\\FootballProject\\MVC_Football\\MVC_Football.csproj",
       "projectName": "MVC_Football",
-      "projectPath": "C:\\Users\\koceu\\OneDrive\\Desktop\\Football\\Football\\MVC_Football\\MVC_Football.csproj",
-      "packagesPath": "C:\\Users\\koceu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\koceu\\OneDrive\\Desktop\\Football\\Football\\MVC_Football\\obj\\",
+      "projectPath": "C:\\Users\\Kostadin\\OneDrive\\Desktop\\FootballProject\\MVC_Football\\MVC_Football.csproj",
+      "packagesPath": "C:\\Users\\Kostadin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kostadin\\OneDrive\\Desktop\\FootballProject\\MVC_Football\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\koceu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Kostadin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3581,11 +3576,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\koceu\\OneDrive\\Desktop\\Football\\Football\\Database\\Database.csproj": {
-              "projectPath": "C:\\Users\\koceu\\OneDrive\\Desktop\\Football\\Football\\Database\\Database.csproj"
+            "C:\\Users\\Kostadin\\OneDrive\\Desktop\\FootballProject\\Database\\Database.csproj": {
+              "projectPath": "C:\\Users\\Kostadin\\OneDrive\\Desktop\\FootballProject\\Database\\Database.csproj"
             },
-            "C:\\Users\\koceu\\OneDrive\\Desktop\\Football\\Football\\Football.Core\\Football.Core.csproj": {
-              "projectPath": "C:\\Users\\koceu\\OneDrive\\Desktop\\Football\\Football\\Football.Core\\Football.Core.csproj"
+            "C:\\Users\\Kostadin\\OneDrive\\Desktop\\FootballProject\\Football.Core\\Football.Core.csproj": {
+              "projectPath": "C:\\Users\\Kostadin\\OneDrive\\Desktop\\FootballProject\\Football.Core\\Football.Core.csproj"
             }
           }
         }
@@ -3640,7 +3635,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
