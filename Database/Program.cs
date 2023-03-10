@@ -7,11 +7,6 @@ namespace Database
     {
         static void Main(string[] args)
         {
-            Team team = new Team()
-            {
-                Name = "Bayern",
-                Budget = 4.8
-            };
             
         }
     }

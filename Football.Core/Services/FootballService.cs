@@ -9,11 +9,10 @@ namespace Football.Core.Services
 {
     public class FootballService : IFootballService
     {
-        private readonly Repository repo;
+        private readonly IRepository repo;
 
         public FootballService(
-            
-            Repository _repo)
+            IRepository _repo)
         {
             
             repo = _repo;

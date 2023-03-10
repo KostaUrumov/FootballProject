@@ -5,7 +5,6 @@ namespace Database.Data.Common
     public interface IRepository
     {
         Task AddAsync<T>(T entity) where T : class;
-
        
         Task AddRangeAsync<T>(IEnumerable<T> entities) where T : class;
 

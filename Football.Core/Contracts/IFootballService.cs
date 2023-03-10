@@ -1,5 +1,4 @@
 ﻿using Football.Core.Models;
-
 namespace Football.Core.Contracts
 {
     public interface IFootballService
