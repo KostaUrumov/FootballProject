@@ -12,10 +12,6 @@ namespace Database.Data.Common
             Context = context;
         }
 
-        public Repository()
-        {
-        }
-
         protected DbSet<T> DbSet<T>() where T : class
         {
             return this.Context.Set<T>();

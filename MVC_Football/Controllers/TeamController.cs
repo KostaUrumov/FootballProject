@@ -43,10 +43,10 @@ namespace MVC_Football.Controllers
             return View();
         }
 
-        [HttpPost]
+       
         public async Task<IActionResult> ShowAllTeams()
         {
-            ViewData["Title"] = "All teams Available";
+           
             var teams = await footballService.ShowAll();
 
             return View(teams);

@@ -32,9 +32,9 @@ namespace Football.Core.Services
             await repo.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<TeamDTO>> ShowAll()
+        public Task<IEnumerable<Team>> ShowAll()
         {
-            return (Task<IEnumerable<TeamDTO>>)repo.AllReadonly<Team>();
+            return (Task<IEnumerable<Team>>)repo.AllReadonly<Team>();
                 
         }
     }
