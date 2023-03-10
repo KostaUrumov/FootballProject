@@ -1,17 +1,24 @@
-﻿@{
-    ViewData["Title"] = "Add Team";
-}
+﻿@using Football.Core.Models;
+@model TeamDTO
 
-<
-<body>
-    <form id="form1" runat="server">
-        <div style="position:absolute">
-
-
-            First Name :<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            <br />
-            Last Name :<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-            <asp:Button OnClick="submit" Text="submit" runat="server" />
+<form asp-controller="Team" asp-action="Add" method="post">
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="small text-danger"></span>
         </div>
-    </form>
-</body>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="Budget"></label>
+            <input asp-for="Budget" class="form-control" />
+            <span asp-validation-for="Budget" class="small text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <button type="submit" class="btn btn-success mt-2">Submit</button>
+        </div>
+    </div>
+</form>

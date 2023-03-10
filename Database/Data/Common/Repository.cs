@@ -12,6 +12,10 @@ namespace Database.Data.Common
             Context = context;
         }
 
+        public Repository()
+        {
+        }
+
         protected DbSet<T> DbSet<T>() where T : class
         {
             return this.Context.Set<T>();
@@ -30,6 +34,11 @@ namespace Database.Data.Common
         public async Task<int> SaveChangesAsync()
         {
             return await this.Context.SaveChangesAsync();
+        }
+
+        public async Task AllReadonly<T>()
+        {
+           
         }
     }
 }

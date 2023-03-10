@@ -17,8 +17,8 @@ namespace MVC_Football
             builder.Services.AddDbContext<FootballDataDBContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            //builder.Services.AddScoped<IFootballService, FootballService>();
-            //builder.Services.AddScoped<IRepository, Repository>();
+            builder.Services.AddScoped<IFootballService, FootballService>();
+            builder.Services.AddScoped<IRepository, Repository>();
 
             var app = builder.Build();
 

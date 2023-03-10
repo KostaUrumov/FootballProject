@@ -1,6 +1,9 @@
 ﻿using Database.Data;
 using Database.Data.Common;
+using Database.Data.Models;
+using Football.Core.Contracts;
 using Football.Core.Models;
+using Football.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +11,12 @@ namespace MVC_Football.Controllers
 {
     public class TeamController : Controller
     {
-        
+        private readonly IFootballService footballService;
+
+        public TeamController(IFootballService _productService)
+        {
+            footballService = _productService;
+        }
 
         public IActionResult Index()
         {
@@ -18,13 +26,30 @@ namespace MVC_Football.Controllers
         [HttpGet]
         public IActionResult Add()
         {
+            ViewData["Title"] = "Add team";
+            TeamDTO team = new TeamDTO();
+            return View(team);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(TeamDTO team)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(team);
+            }
+
+            await footballService.Add(team);
             return View();
         }
 
         [HttpPost]
-        public IActionResult Add(TeamDTO team)
+        public async Task<IActionResult> ShowAllTeams()
         {
-            return View();
+            ViewData["Title"] = "All teams Available";
+            var teams = await footballService.ShowAll();
+
+            return View(teams);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Database.Data
         {
             if(!builder.IsConfigured)
             {
-                builder.UseSqlServer(@"Server=DESKTOP-Q3OSTOP;Database=FootballData;Trusted_Connection=True; trustServerCertificate=true");
+                builder.UseSqlServer(@"Server=.;Database=FootballData;Trusted_Connection=True; trustServerCertificate=true");
             }
         }
 

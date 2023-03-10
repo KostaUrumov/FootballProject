@@ -10,5 +10,7 @@ namespace Database.Data.Common
 
         Task<int> SaveChangesAsync();
 
+        Task AllReadonly<T>();
+
     }
 }

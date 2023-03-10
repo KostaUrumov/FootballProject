@@ -1,0 +1,28 @@
+﻿@using Football.Core.Models;
+@model IEnumerable<TeamDTO>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team</th>
+            <th scope="col">Budget</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var mar in Model)
+        {
+            <tr>
+                <th scope="row">1</th>
+                <td>@mar.Name</td>
+                <td>@mar.Budget</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

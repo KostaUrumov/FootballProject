@@ -2,8 +2,10 @@
 using Database.Data.Models;
 using Football.Core.Contracts;
 using Football.Core.Models;
+using System.Linq;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace Football.Core.Services
 {
@@ -14,7 +16,7 @@ namespace Football.Core.Services
         public FootballService(
             IRepository _repo)
         {
-            
+
             repo = _repo;
         }
         public async Task Add(TeamDTO TeamDto)
@@ -26,10 +28,14 @@ namespace Football.Core.Services
                 Players = TeamDto.Players,
 
             };
-
+            await repo.AddAsync(team);
             await repo.SaveChangesAsync();
-           
+        }
 
+        public Task<IEnumerable<TeamDTO>> ShowAll()
+        {
+            return (Task<IEnumerable<TeamDTO>>)repo.AllReadonly<Team>();
+                
         }
     }
 }
